@@ -6,17 +6,15 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:32:20 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/12 17:03:31 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/13 07:10:30 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DEFINES_H
 # define FRACTOL_H
 
-# define TITLE          "Fract'ol - "
-# define USAGE          "Usage: ./fractol [Mandelbrot | Julia | Ship]"
-# define UNK_FRACTAL    "Available Fractals :\n- Mandlebrot\n- Julia\n- Ship"
-# define SQUARE(x) x * x
+# define FRACTALS    		"Available Fractals :\n- Mandlebrot\n- Julia\n- Ship"
+# define SQUARE(x) 			(x * x)
 # define W                  800
 # define H                  800
 # define ESC_KEY            53

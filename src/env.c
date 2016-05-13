@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:38:34 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/12 16:46:01 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/13 07:07:35 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ int     ft_type(char *f)
 		return (2);
 	if (ft_strcmp(f, "Ship") == 0 || ft_strcmp(f, "ship") == 0)
 		return (3);
-	return (ft_error(UNK_FRACTAL));
+	return (ft_error(FRACTALS));
 }
 
-void    ft_init_mod(t_env *env)
+void    init_mod(t_env *env)
 {
 	env->mod.xmax = 2.0;
 	env->mod.xmin = -2.0;
@@ -51,7 +51,7 @@ void    ft_init_mod(t_env *env)
 	env->mod.ymax = 1.5;
 }
 
-void    ft_init_fract(t_env *env)
+void    init_fract(t_env *env)
 {
 	env->f.cr = -0.8;
 	env->f.ci = 0.156;
@@ -61,12 +61,12 @@ void    ft_init_fract(t_env *env)
 	env->f.ni = 0.0;
 }
 
-t_env   ft_init_env(char *type)
+t_env   init_env(char *type)
 {
 	t_env   env;
 
-	ft_init_fract(&env);
-	ft_init_mod(&env);
+	init_fract(&env);
+	init_mod(&env);
 	env.zx = ((env.mod.xmax - env.mod.xmin) / (W - 1));
 	env.zy = ((env.mod.ymax - env.mod.ymin) / (H - 1));
 	env.type = ft_type(type);

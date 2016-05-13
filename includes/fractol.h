@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:30:15 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/13 06:06:52 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/13 07:04:43 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ typedef struct      s_env
 }                   t_env;
 
 int                 ft_error(char *error);
-t_env               ft_init_env(char *type);
+t_env               init_env(char *type);
 int                 ft_type(char *f);
 int                 ft_keyhook(int keycode, t_env *env);
 int                 ft_expose_hook(t_env *e);

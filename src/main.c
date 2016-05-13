@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:33:43 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/13 06:06:35 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/13 07:07:10 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ int     main(int ac, char **av)
 	t_env   env;
 
 	if (ac != 2)
-		ft_error("Usage : ./fractol 'fractale'\n(fractales : mandelbrot, julia, ship)");
-	env = ft_init_env(av[1]);
+		ft_error("Usage : ./fractol 'fractale'\nFRACTALS");
+	env = init_env(av[1]);
 	draw_f(env);
 	display(env);
 	mlx_key_hook(env.win, ft_keyhook, &env);
