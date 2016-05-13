@@ -6,7 +6,7 @@
 #    By: pmartine <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 19:43:41 by pmartine          #+#    #+#              #
-#    Updated: 2016/05/13 05:31:14 by pmartine         ###   ########.fr        #
+#    Updated: 2016/05/13 07:12:03 by pmartine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,5 +34,10 @@ fclean: clean
 	@echo "all files removed"
 
 re: fclean all
+
+push: fclean
+	git add *
+	git commit -m "auto maj"
+	git push
 
 .PHONY : all clean fclean re
