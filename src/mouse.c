@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:34:46 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/12 16:47:23 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/13 05:57:03 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int         ft_motionhook(int x, int y, t_env *env)
 	}
 	else
 		return (0);
-	return (ft_draw_fract(*env));
+	return (draw_f(*env));
 }
 
 int         ft_mousehook(int button, int x, int y, t_env *env)
@@ -59,5 +59,5 @@ int         ft_mousehook(int button, int x, int y, t_env *env)
 		env->f.ci *= 1.5;
 	}
 	ft_init_mouse(env, dcr, dci);
-	return (ft_draw_fract(*env));
+	return (draw_f(*env));
 }

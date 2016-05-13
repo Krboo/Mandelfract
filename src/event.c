@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:36:18 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/12 17:22:00 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/13 05:56:13 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,6 @@ int     ft_eventkey(int keycode, t_env *env)
 	else if (keycode == C)
 		env->color++;
 	ft_move(env, keycode);
-	ft_draw_fract(*env);
+	draw_f(*env);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:30:15 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/13 05:42:19 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/13 06:06:52 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int                 ft_expose_hook(t_env *e);
 int                 ft_fractal(t_env env, int x, int y);
 int                 clr_get(int i, t_env env);
 void                pixel_put(t_env env, int x, int y, int clr);
-int                 ft_draw_fract(t_env env);
+int                 draw_f(t_env env);
 int                 mandelbrot(t_env env, int x, int y);
 int                 julia(t_env env, int x, int y);
 int                 burning_ship(t_env env, int x, int y);
@@ -87,6 +87,5 @@ t_env               *ft_reset(t_env *env);
 int                 ft_mousehook(int button, int x, int y, t_env *env);
 int                 ft_motionhook(int x, int y, t_env *env);
 void                display(t_env e);
-void				ft_display_menu(void);
 
 #endif

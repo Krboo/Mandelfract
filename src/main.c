@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:33:43 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/13 05:39:32 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/13 06:06:35 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,16 @@ void	display(t_env e)
 
 	commands = "up / down / left / right : movements";
 	mlx_string_put(e.mlx, e.win, 5, 5, 0xFBFBFB, commands);
-	commands = "salut";
+	commands = "Mouse (Scroll wheel or left/right Buttons) : zoom / dezoom";
 	mlx_string_put(e.mlx, e.win, 5, 20, 0xFBFBFB, commands);
-	commands = "salut";
+	commands = "iterations : + / - (keypad)";
 	mlx_string_put(e.mlx, e.win, 5, 35, 0xFBFBFB, commands);
-	commands = "salut";
+	commands = "frequence : + / - (keyboard)";
 	mlx_string_put(e.mlx, e.win, 5, 50, 0xFBFBFB, commands);
-	commands = "salut";
+	commands = "change color palette : c";
 	mlx_string_put(e.mlx, e.win, 5, 65, 0xFBFBFB, commands);
-	commands = "salut";
+	commands = "motion (julia) : tab";
 	mlx_string_put(e.mlx, e.win, 5, 80, 0xFBFBFB, commands);
-	commands = "salut";
-	mlx_string_put(e.mlx, e.win, 5, 95, 0xFBFBFB, commands);
 }
 
 int     main(int ac, char **av)
@@ -45,8 +43,7 @@ int     main(int ac, char **av)
 	if (ac != 2)
 		ft_error("Usage : ./fractol 'fractale'\n(fractales : mandelbrot, julia, ship)");
 	env = ft_init_env(av[1]);
-	ft_draw_fract(env);
-	ft_display_menu();
+	draw_f(env);
 	display(env);
 	mlx_key_hook(env.win, ft_keyhook, &env);
 	mlx_mouse_hook(env.win, ft_mousehook, &env);

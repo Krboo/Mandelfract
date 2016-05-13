@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:35:22 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/12 17:34:33 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/13 05:53:26 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int     ft_fractal(t_env env, int x, int y)
 		return (0);
 }
 
-int     ft_draw_fract(t_env env)
+int     draw_f(t_env env)
 {
 	int                 clr;
 	int                 px;

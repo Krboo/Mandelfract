@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:40:26 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/12 17:22:34 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/13 06:06:04 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,28 +39,4 @@ int     clr_get(int i, t_env env)
 	g = cos(c + env.color) * 127 + 128;
 	b = cos(c + env.color + env.color) * 127 + 128;
 	return ((r << 16) + (b << 8) + g);
-}
-
-void    ft_display_menu(void)
-{
-	ft_putstr("\x1b[36m\
-			_____________________________________\n\
-			\x1b[31mCONTROLS:\n\
-			\x1b[32mMouvements: \x1b[33mMandelbrot & Julia\x1b[34m\n\
-			\x1b[34mY : Arrow: \x1b[35mUP\x1b[34m, \x1b[35mDOWN\n\
-			\x1b[34mX : Arrow: \x1b[35mLEFT\x1b[34m, \x1b[35mRIGHT\n\
-			\n\
-			\x1b[32mZoom:\x1b[34m\n\
-			\x1b[34mIN: MOUSE: \x1b[35mMB1\n\
-			\x1b[34mOUT: MOUSE: \x1b[35mMB2\n\
-			\x1b[34mIN: WHEEL: \x1b[35mUP\n\
-			\x1b[34mOUT: WHEEL: \x1b[35mDOWN\n\
-			\n\
-			\x1b[32mVisual:\x1b[34m\n\
-			\x1b[34mITERATIONS: Keypad \x1b[35m+\x1b[34m,\x1b[35m-\n\
-			\x1b[34mFREQUENCE: Keyboard: \x1b[35m+ \x1b[34m, \x1b[35m-\n\
-			\x1b[34mCOLOR: Keyboard: \x1b[35mC\n\
-			\x1b[34mMOTION: Keyboard: \x1b[35m TAB \x1b[33mJulia\n\
-			\x1b[36m_____________________________________\n\
-			\n");
 }
