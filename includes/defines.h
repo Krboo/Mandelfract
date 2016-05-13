@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:32:20 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/13 07:10:30 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/13 08:58:14 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@
 # define DECREASE_ITER      78
 # define KEYBOARD_MAX_FREQ  24
 # define KEYBOARD_MIN_FREQ  27
-# define KEY_UP             126
-# define KEY_DOWN           125
-# define KEY_RIGHT          124
-# define KEY_LEFT           123
+# define UP					126
+# define DOWN				125
+# define RIGHT  	        124
+# define LEFT       	    123
 # define NEXT_FRACT         49
 # define ENTER_RESET        36
 # define MB1                1

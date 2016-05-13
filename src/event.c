@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:36:18 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/13 05:56:13 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/13 08:57:26 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,22 +28,22 @@ void    ft_move(t_env *env, int keycode)
 {
 	const   double k = env->zx * 10;
 
-	if (keycode == KEY_UP)
+	if (keycode == UP)
 	{
 		env->mod.ymax -= k;
 		env->mod.ymin -= k;
 	}
-	else if (keycode == KEY_DOWN)
+	else if (keycode == DOWN)
 	{
 		env->mod.ymax += k;
 		env->mod.ymin += k;
 	}
-	else if (keycode == KEY_RIGHT)
+	else if (keycode == RIGHT)
 	{
 		env->mod.xmax -= k;
 		env->mod.xmin -= k;
 	}
-	else if (keycode == KEY_LEFT)
+	else if (keycode == LEFT)
 	{
 		env->mod.xmax += k;
 		env->mod.xmin += k;
