@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:30:15 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/16 15:56:57 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/16 23:28:09 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,21 @@ typedef struct      s_img
 	int             height;
 }                   t_img;
 
+//each iteration, it calculates: new = old*old + c, where c is a constant and old starts at current pixel
+
 typedef struct      s_fract
 {
-	double          cr;
-	double          ci;
+	double          cr; //real part of the constant c
+	double          ci; //imaginary part
 	double          pr;
 	double          pi;
-	double          nrl;
-	double          ni;
-	double          orl;
-	double          oi;
+	double          nrl; //new real
+	double          ni; //new imaginary
+	double          orl; //old real
+	double          oi; //old imaginary
 	double          zoom;
-	double          mx;
-	double          my;
+	double          mx; //movex
+	double          my; //movey
 }                   t_fract;
 
 typedef struct      s_env
