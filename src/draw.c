@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.c                                          :+:      :+:    :+:   */
+/*   draw.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/12 16:35:22 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/13 05:53:26 by pmartine         ###   ########.fr       */
+/*   Created: 2016/05/16 15:47:23 by pmartine          #+#    #+#             */
+/*   Updated: 2016/05/16 17:09:39 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ int     ft_fractal(t_env env, int x, int y)
 
 int     draw_f(t_env env)
 {
-	int                 clr;
-	int                 px;
-	register int        x;
-	register int        y;
+	int        color;
+	int        px;
+	int        x;
+	int        y;
 
 	y = 0;
 	while (y < H)
@@ -38,8 +38,8 @@ int     draw_f(t_env env)
 		while (x < W)
 		{
 			px = ft_fractal(env, x, y);
-			clr = clr_get(px, env);
-			pixel_put(env, x, y, clr);
+			color = color_get(px, env);
+			pixel_put(env, x, y, color);
 			x++;
 		}
 		y++;

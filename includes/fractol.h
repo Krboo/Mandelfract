@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:30:15 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/13 07:04:43 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/16 15:56:57 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int                 ft_type(char *f);
 int                 ft_keyhook(int keycode, t_env *env);
 int                 ft_expose_hook(t_env *e);
 int                 ft_fractal(t_env env, int x, int y);
-int                 clr_get(int i, t_env env);
+int                 color_get(int i, t_env env);
 void                pixel_put(t_env env, int x, int y, int clr);
 int                 draw_f(t_env env);
 int                 mandelbrot(t_env env, int x, int y);

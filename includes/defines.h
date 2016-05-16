@@ -6,14 +6,13 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:32:20 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/13 08:58:14 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/16 15:01:56 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DEFINES_H
 # define FRACTOL_H
 
-# define FRACTALS    		"Available Fractals :\n- Mandlebrot\n- Julia\n- Ship"
 # define SQUARE(x) 			(x * x)
 # define W                  800
 # define H                  800

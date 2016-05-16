@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:35:56 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/13 07:08:51 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/16 13:26:14 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int     mandelbrot(t_env env, int x, int y)
 {
-	register int    i;
-	register double zr;
-	register double zi;
+	int    i;
+	double zr;
+	double zi;
 
 	i = -1;
 	env.f.pi = env.mod.ymax - (long double)y * env.zy;
@@ -38,9 +38,9 @@ int     mandelbrot(t_env env, int x, int y)
 
 int     julia(t_env env, int x, int y)
 {
-	register int            i;
-	register long double    zr;
-	register long double    zi;
+	int            i;
+	long double    zr;
+	long double    zi;
 
 	env.f.ni = env.mod.ymax - (long double)y * env.zy;
 	env.f.nrl = env.mod.xmin + (long double)x * env.zx;
@@ -60,9 +60,9 @@ int     julia(t_env env, int x, int y)
 
 int     burning_ship(t_env env, int x, int y)
 {
-	register int            i;
-	register long double    zr;
-	register long double    zi;
+	int            i;
+	long double    zr;
+	long double    zi;
 
 	i = -1;
 	env.f.pi = env.mod.ymax - (long double)y * env.zy;

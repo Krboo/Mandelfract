@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:33:43 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/13 07:07:10 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/16 20:41:59 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,10 @@ void	display(t_env e)
 	mlx_string_put(e.mlx, e.win, 5, 50, 0xFBFBFB, commands);
 	commands = "change color palette : c";
 	mlx_string_put(e.mlx, e.win, 5, 65, 0xFBFBFB, commands);
-	commands = "motion (julia) : tab";
+	commands = "stop (julia) : tab";
 	mlx_string_put(e.mlx, e.win, 5, 80, 0xFBFBFB, commands);
+	commands = "reset fractal : return";
+	mlx_string_put(e.mlx, e.win, 5, 95, 0xFBFBFB, commands);
 }
 
 int     main(int ac, char **av)
@@ -41,7 +43,7 @@ int     main(int ac, char **av)
 	t_env   env;
 
 	if (ac != 2)
-		ft_error("Usage : ./fractol 'fractale'\nFRACTALS");
+		ft_error("Usage : ./fractol 'fractal'\n\nAvailable fractals :\n- mandelbrot\n- julia");
 	env = init_env(av[1]);
 	draw_f(env);
 	display(env);

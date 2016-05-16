@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:34:46 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/13 05:57:03 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/16 15:21:28 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ int         ft_motionhook(int x, int y, t_env *env)
 
 int         ft_mousehook(int button, int x, int y, t_env *env)
 {
-	register double     dcr;
-	register double     dci;
+	double     dcr;
+	double     dci;
 
 	dcr = x;
 	dci = y;
