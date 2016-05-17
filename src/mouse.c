@@ -6,13 +6,13 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:34:46 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/16 15:21:28 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/17 22:14:58 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-static void ft_init_mouse(t_env *env, double dcr, double dci)
+static void		ft_init_mouse(t_env *env, double dcr, double dci)
 {
 	dcr = env->f.cr / 2;
 	dci = env->f.ci / 2;
@@ -24,7 +24,7 @@ static void ft_init_mouse(t_env *env, double dcr, double dci)
 	env->zx = ((env->mod.xmax - env->mod.xmin) / (W - 1));
 }
 
-int         ft_motionhook(int x, int y, t_env *env)
+int				ft_motionhook(int x, int y, t_env *env)
 {
 	if (x >= 0 && y >= 0 && x <= W && y <= H && env->type == 2 && \
 			env->motion == 1)
@@ -37,10 +37,10 @@ int         ft_motionhook(int x, int y, t_env *env)
 	return (draw_f(*env));
 }
 
-int         ft_mousehook(int button, int x, int y, t_env *env)
+int				ft_mousehook(int button, int x, int y, t_env *env)
 {
-	double     dcr;
-	double     dci;
+	double	dcr;
+	double	dci;
 
 	dcr = x;
 	dci = y;
@@ -48,12 +48,12 @@ int         ft_mousehook(int button, int x, int y, t_env *env)
 	env->f.ci = env->mod.ymax - env->mod.ymin;
 	env->f.mx = ((double)x / W * env->f.cr) - env->f.cr / 2 + env->f.mx;
 	env->f.my = (double)(H - y) / H * env->f.ci - env->f.ci / 2 + env->f.my;
-	if ((button == MB1 || button == MWD) && x <= W && y <= H)
+	if ((button == 1 || button == 4) && x <= W && y <= H)
 	{
 		env->f.cr /= 1.5;
 		env->f.ci /= 1.5;
 	}
-	else if ((button == MB2 || button == MWU) && x <= W && y <= H)
+	else if ((button == 2 || button == 5) && x <= W && y <= H)
 	{
 		env->f.cr *= 1.5;
 		env->f.ci *= 1.5;

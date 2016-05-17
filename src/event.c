@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:36:18 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/17 21:55:12 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/17 22:49:36 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,7 @@ void    ft_move(t_env *env, int keycode)
 	}
 	else if (keycode == MENU)
 	{
-		if (env->display == 0)
-			env->display = 1;
-		else
-			env->display = 0;
+		env->display = (env->display == 1) ? 0 : 1;
 	}
 	env->zy = ((env->mod.ymax - env->mod.ymin) / (H - 1));
 	env->zx = ((env->mod.xmax - env->mod.xmin) / (W - 1));
@@ -81,7 +78,7 @@ int     ft_eventkey(int keycode, t_env *env)
 		env->freq *= 2;
 	else if (keycode == DEC_FREQ && env->freq > 0.1)
 		env->freq /= 2;
-	else if (keycode == NEXT_FRACT && (env = ft_reset(env)))
+	else if (keycode == CHANGE_FRACT && (env = ft_reset(env)))
 		env->type = (env->type == 3) ? 1 : env->type + 1;
 	else if (keycode == RESET)
 		env = ft_reset(env);

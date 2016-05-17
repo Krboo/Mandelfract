@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:32:20 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/17 21:55:07 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/17 22:42:33 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,9 @@
 # define DOWN				125
 # define RIGHT  	        124
 # define LEFT       	    123
-# define NEXT_FRACT         49
+# define CHANGE_FRACT		49
 # define RESET		        36
 # define MENU				71
-# define MB1                1
-# define MB2                2
-# define MWU                5
-# define MWD                4
 # define C                  8
 
 #endif

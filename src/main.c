@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:33:43 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/17 21:57:01 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/17 22:45:28 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,15 @@ void	display(t_env e)
 		mlx_string_put(e.mlx, e.win, 5, 35, 0xFBFBFB, commands);
 		commands = "frequence : + / - (keyboard)";
 		mlx_string_put(e.mlx, e.win, 5, 50, 0xFBFBFB, commands);
-		commands = "change color palette : c";
+		commands = "stop motion (julia) : tab";
 		mlx_string_put(e.mlx, e.win, 5, 65, 0xFBFBFB, commands);
-		commands = "stop (julia) : tab";
+		commands = "change color palette : c";
 		mlx_string_put(e.mlx, e.win, 5, 80, 0xFBFBFB, commands);
 		commands = "reset fractal : return";
 		mlx_string_put(e.mlx, e.win, 5, 95, 0xFBFBFB, commands);
-		commands = "Hide / Display this menu : clear";
-		mlx_string_put(e.mlx, e.win, 5, 110, 0xFBFBFB, commands);
 		commands = "change fractal : space";
+		mlx_string_put(e.mlx, e.win, 5, 110, 0xFBFBFB, commands);
+		commands = "Hide / Display this menu : clear";
 		mlx_string_put(e.mlx, e.win, 5, 125, 0xFBFBFB, commands);
 	}
 }
