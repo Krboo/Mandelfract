@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:36:18 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/16 20:29:11 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/17 21:55:12 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int     ft_keyhook(int keycode, t_env *env)
 {
-	if (keycode == ESC_KEY)
+	if (keycode == ESC)
 	{
 		mlx_destroy_window(env->mlx, env->win);
-		exit(EXIT_SUCCESS);
+		exit(0);
 	}
 	else
 		ft_eventkey(keycode, env);
@@ -48,6 +48,13 @@ void    ft_move(t_env *env, int keycode)
 		env->mod.xmax += k;
 		env->mod.xmin += k;
 	}
+	else if (keycode == MENU)
+	{
+		if (env->display == 0)
+			env->display = 1;
+		else
+			env->display = 0;
+	}
 	env->zy = ((env->mod.ymax - env->mod.ymin) / (H - 1));
 	env->zx = ((env->mod.xmax - env->mod.xmin) / (W - 1));
 }
@@ -64,17 +71,19 @@ int     ft_color_hook(int keycode, int *color)
 int     ft_eventkey(int keycode, t_env *env)
 {
 	mlx_clear_window(env->mlx, env->win);
-	if (keycode == INCERASE_ITER)
+	//ft_putnbr(keycode);
+	//ft_putchar(10);
+	if (keycode == INC_ITER)
 		env->iter = (env->iter < 8000) ? env->iter * 2 : env->iter;
-	else if (keycode == DECREASE_ITER)
+	else if (keycode == DEC_ITER)
 		env->iter = (env->iter > 2) ? env->iter / 2 : env->iter;
-	else if (keycode == KEYBOARD_MAX_FREQ)
+	else if (keycode == INC_FREQ)
 		env->freq *= 2;
-	else if (keycode == KEYBOARD_MIN_FREQ && env->freq > 0.1)
+	else if (keycode == DEC_FREQ && env->freq > 0.1)
 		env->freq /= 2;
 	else if (keycode == NEXT_FRACT && (env = ft_reset(env)))
 		env->type = (env->type == 3) ? 1 : env->type + 1;
-	else if (keycode == ENTER_RESET)
+	else if (keycode == RESET)
 		env = ft_reset(env);
 	else if (keycode == MOTION)
 		env->motion = (env->motion == 1) ? 0 : 1;

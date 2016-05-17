@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:33:43 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/16 20:41:59 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/17 21:57:01 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,28 @@ int		ft_error(char *str)
 void	display(t_env e)
 {
 	char	*commands;
-
-	commands = "up / down / left / right : movements";
-	mlx_string_put(e.mlx, e.win, 5, 5, 0xFBFBFB, commands);
-	commands = "Mouse (Scroll wheel or left/right Buttons) : zoom / dezoom";
-	mlx_string_put(e.mlx, e.win, 5, 20, 0xFBFBFB, commands);
-	commands = "iterations : + / - (keypad)";
-	mlx_string_put(e.mlx, e.win, 5, 35, 0xFBFBFB, commands);
-	commands = "frequence : + / - (keyboard)";
-	mlx_string_put(e.mlx, e.win, 5, 50, 0xFBFBFB, commands);
-	commands = "change color palette : c";
-	mlx_string_put(e.mlx, e.win, 5, 65, 0xFBFBFB, commands);
-	commands = "stop (julia) : tab";
-	mlx_string_put(e.mlx, e.win, 5, 80, 0xFBFBFB, commands);
-	commands = "reset fractal : return";
-	mlx_string_put(e.mlx, e.win, 5, 95, 0xFBFBFB, commands);
+	
+	if (e.display == 1)
+	{
+		commands = "up / down / left / right : movements";
+		mlx_string_put(e.mlx, e.win, 5, 5, 0xFBFBFB, commands);
+		commands = "Mouse (Scroll wheel or left/right Buttons) : zoom / dezoom";
+		mlx_string_put(e.mlx, e.win, 5, 20, 0xFBFBFB, commands);
+		commands = "iterations : + / - (keypad)";
+		mlx_string_put(e.mlx, e.win, 5, 35, 0xFBFBFB, commands);
+		commands = "frequence : + / - (keyboard)";
+		mlx_string_put(e.mlx, e.win, 5, 50, 0xFBFBFB, commands);
+		commands = "change color palette : c";
+		mlx_string_put(e.mlx, e.win, 5, 65, 0xFBFBFB, commands);
+		commands = "stop (julia) : tab";
+		mlx_string_put(e.mlx, e.win, 5, 80, 0xFBFBFB, commands);
+		commands = "reset fractal : return";
+		mlx_string_put(e.mlx, e.win, 5, 95, 0xFBFBFB, commands);
+		commands = "Hide / Display this menu : clear";
+		mlx_string_put(e.mlx, e.win, 5, 110, 0xFBFBFB, commands);
+		commands = "change fractal : space";
+		mlx_string_put(e.mlx, e.win, 5, 125, 0xFBFBFB, commands);
+	}
 }
 
 int     main(int ac, char **av)

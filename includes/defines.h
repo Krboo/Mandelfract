@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:32:20 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/16 15:01:56 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/17 21:55:07 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,21 @@
 # define FRACTOL_H
 
 # define SQUARE(x) 			(x * x)
-# define W                  800
-# define H                  800
-# define ESC_KEY            53
+# define W                  1000
+# define H                  1000
+# define ESC	            53
 # define MOTION             48
-# define INCERASE_ITER      69
-# define DECREASE_ITER      78
-# define KEYBOARD_MAX_FREQ  24
-# define KEYBOARD_MIN_FREQ  27
+# define INC_ITER			69
+# define DEC_ITER			78
+# define INC_FREQ			24
+# define DEC_FREQ			27
 # define UP					126
 # define DOWN				125
 # define RIGHT  	        124
 # define LEFT       	    123
 # define NEXT_FRACT         49
-# define ENTER_RESET        36
+# define RESET		        36
+# define MENU				71
 # define MB1                1
 # define MB2                2
 # define MWU                5

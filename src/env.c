@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/16 15:47:10 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/16 23:13:58 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/17 19:47:45 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ t_env	*ft_reset(t_env *env)
 	env->mod.xmin = -2.0;
 	env->mod.ymin = -2.0;
 	env->mod.ymax = 1.5;
-	env->f.cr = -0.8;
-	env->f.ci = 0.156;
+	env->f.cr = -0.7;
+	env->f.ci = 0.256;
 	env->f.mx = 0.0;
 	env->f.my = 0.0;
 	env->f.nrl = 0.0;
@@ -27,6 +27,7 @@ t_env	*ft_reset(t_env *env)
 	env->freq = 0.1;
 	env->iter = 16;
 	env->color = 2;
+	env->display = 1;
 	env->zx = ((env->mod.xmax - env->mod.xmin) / (W - 1));
 	env->zy = ((env->mod.ymax - env->mod.ymin) / (H - 1));
 	return (env);
@@ -65,6 +66,7 @@ t_env   init_env(char *type)
 	env.zx = ((env.mod.xmax - env.mod.xmin) / (W - 1));
 	env.zy = ((env.mod.ymax - env.mod.ymin) / (H - 1));
 	env.type = ft_type(type);
+	env.display = 1;
 	env.img.width = W;
 	env.img.height = H;
 	env.mlx = mlx_init();

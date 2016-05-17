@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:30:15 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/16 23:28:09 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/17 19:51:08 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ typedef struct      s_env
 	int             motion;
 	int             iter;
 	int             color;
+	int				display;
 	double          freq;
 	double          zx;
 	double          zy;
