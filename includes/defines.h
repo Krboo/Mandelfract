@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:32:20 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/17 22:42:33 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/17 23:07:39 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 # define MOTION             48
 # define INC_ITER			69
 # define DEC_ITER			78
-# define INC_FREQ			24
-# define DEC_FREQ			27
+# define INC_FREQ			116
+# define DEC_FREQ			121
 # define UP					126
 # define DOWN				125
 # define RIGHT  	        124

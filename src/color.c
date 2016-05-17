@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:40:26 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/16 21:57:11 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/17 23:05:18 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ int     color_get(int i, t_env env)
 	if (i == env.iter)
 		return (0);
 	c = env.freq * (i);
-	r = cos(c) * 100 + 256;
-	g = cos(c + env.color) * 100 + 256;
-	b = cos(c + env.color + env.color) * 100 + 256;
+	r = cos(c) * 100 + 200;
+	g = cos(c + env.color) * 100 + 100;
+	b = cos(c + env.color + env.color) * 100 + 100;
 	return ((r << 16) + (b << 8) + g);
 }

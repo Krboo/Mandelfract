@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:33:43 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/17 22:45:28 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/17 23:16:06 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,23 @@ void	display(t_env e)
 	
 	if (e.display == 1)
 	{
-		commands = "up / down / left / right : movements";
+		commands = "Zoom : scroll wheel or mouse buttons";
 		mlx_string_put(e.mlx, e.win, 5, 5, 0xFBFBFB, commands);
-		commands = "Mouse (Scroll wheel or left/right Buttons) : zoom / dezoom";
+		commands = "Movements : Arrow Keys";
 		mlx_string_put(e.mlx, e.win, 5, 20, 0xFBFBFB, commands);
-		commands = "iterations : + / - (keypad)";
+		commands = "Iterations : +/- (keypad)";
 		mlx_string_put(e.mlx, e.win, 5, 35, 0xFBFBFB, commands);
-		commands = "frequence : + / - (keyboard)";
+		commands = "Frequence : pageup / pagedown)";
 		mlx_string_put(e.mlx, e.win, 5, 50, 0xFBFBFB, commands);
-		commands = "stop motion (julia) : tab";
+		commands = "Stop motion (julia) : tab";
 		mlx_string_put(e.mlx, e.win, 5, 65, 0xFBFBFB, commands);
-		commands = "change color palette : c";
+		commands = "Change color palette : c";
 		mlx_string_put(e.mlx, e.win, 5, 80, 0xFBFBFB, commands);
-		commands = "reset fractal : return";
+		commands = "Reset fractal : return";
 		mlx_string_put(e.mlx, e.win, 5, 95, 0xFBFBFB, commands);
-		commands = "change fractal : space";
+		commands = "Change fractal : space";
 		mlx_string_put(e.mlx, e.win, 5, 110, 0xFBFBFB, commands);
-		commands = "Hide / Display this menu : clear";
+		commands = "Hide / display this menu : clear";
 		mlx_string_put(e.mlx, e.win, 5, 125, 0xFBFBFB, commands);
 	}
 }
