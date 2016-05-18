@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:33:43 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/18 20:18:10 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/18 20:36:04 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int		main(int ac, char **av)
 	display(env);
 	mlx_key_hook(env.win, ft_keyhook, &env);
 	mlx_mouse_hook(env.win, ft_mousehook, &env);
-	mlx_hook(env.win, 6, 1L << 6, ft_motionhook, &env);
+	mlx_hook(env.win, 6, 64, ft_motionhook, &env);
 	mlx_do_sync(env.mlx);
 	mlx_loop(env.mlx);
 }
