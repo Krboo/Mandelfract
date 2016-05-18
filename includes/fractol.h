@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:30:15 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/17 19:51:08 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/18 20:15:59 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ typedef struct      s_env
 	int             iter;
 	int             color;
 	int				display;
+	int				values;
 	double          freq;
 	double          zx;
 	double          zy;
@@ -90,5 +91,4 @@ t_env               *ft_reset(t_env *env);
 int                 ft_mousehook(int button, int x, int y, t_env *env);
 int                 ft_motionhook(int x, int y, t_env *env);
 void                display(t_env e);
-
 #endif

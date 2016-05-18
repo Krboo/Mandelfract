@@ -5,31 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/16 15:47:23 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/16 17:09:39 by pmartine         ###   ########.fr       */
+/*   Created: 2016/05/18 14:17:39 by pmartine          #+#    #+#             */
+/*   Updated: 2016/05/18 20:15:36 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-int     ft_fractal(t_env env, int x, int y)
+int		ft_fractal(t_env env, int x, int y)
 {
 	if (env.type == 1)
 		return (mandelbrot(env, x, y));
 	if (env.type == 2)
 		return (julia(env, x, y));
-	if (env.type == 3)
-		return (burning_ship(env, x, y));
 	else
 		return (0);
 }
 
-int     draw_f(t_env env)
+int		draw_f(t_env env)
 {
-	int        color;
-	int        px;
-	int        x;
-	int        y;
+	int		color;
+	int		px;
+	int		x;
+	int		y;
 
 	y = 0;
 	while (y < H)

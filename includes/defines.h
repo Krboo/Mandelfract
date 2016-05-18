@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:32:20 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/17 23:19:31 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/18 18:12:31 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@
 # define CHANGE_FRACT		49
 # define RESET		        36
 # define MENU				71
+# define VALUES				258
 # define C                  8
 
 #endif

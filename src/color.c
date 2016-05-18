@@ -6,15 +6,15 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:40:26 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/17 23:05:18 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/18 16:28:14 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-void    pixel_put(t_env env, int x, int y, int color)
+void	pixel_put(t_env env, int x, int y, int color)
 {
-	int     index;
+	int		index;
 
 	if (x >= 0 && x < W && y >= 0 && y < H)
 	{
@@ -25,12 +25,12 @@ void    pixel_put(t_env env, int x, int y, int color)
 	}
 }
 
-int     color_get(int i, t_env env)
+int		color_get(int i, t_env env)
 {
-	double c;
-	int    r;
-	int    g;
-	int    b;
+	double	c;
+	int		r;
+	int		g;
+	int		b;
 
 	if (i == env.iter)
 		return (0);

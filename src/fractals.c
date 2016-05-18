@@ -6,17 +6,17 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:35:56 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/16 13:26:14 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/18 16:49:33 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-int     mandelbrot(t_env env, int x, int y)
+int		mandelbrot(t_env env, int x, int y)
 {
-	int    i;
-	double zr;
-	double zi;
+	int		i;
+	double	zr;
+	double	zi;
 
 	i = -1;
 	env.f.pi = env.mod.ymax - (long double)y * env.zy;
@@ -36,11 +36,11 @@ int     mandelbrot(t_env env, int x, int y)
 	return (i);
 }
 
-int     julia(t_env env, int x, int y)
+int		julia(t_env env, int x, int y)
 {
-	int            i;
-	long double    zr;
-	long double    zi;
+	int				i;
+	long double		zr;
+	long double		zi;
 
 	env.f.ni = env.mod.ymax - (long double)y * env.zy;
 	env.f.nrl = env.mod.xmin + (long double)x * env.zx;
@@ -52,30 +52,6 @@ int     julia(t_env env, int x, int y)
 		env.f.ni *= env.f.nrl;
 		env.f.ni += env.f.ni + env.f.ci;
 		env.f.nrl = zr - zi + env.f.cr;
-		zr = SQUARE(env.f.nrl);
-		zi = SQUARE(env.f.ni);
-	}
-	return (i);
-}
-
-int     burning_ship(t_env env, int x, int y)
-{
-	int            i;
-	long double    zr;
-	long double    zi;
-
-	i = -1;
-	env.f.pi = env.mod.ymax - (long double)y * env.zy;
-	env.f.pr = env.mod.xmin + (long double)x * env.zx;
-	env.f.nrl = env.f.pr;
-	env.f.ni = env.f.pi;
-	zr = SQUARE(env.f.nrl);
-	zi = SQUARE(env.f.ni);
-	while (++i < env.iter && (zr + zi) < 4)
-	{
-		env.f.ni = 2 * fabs(env.f.nrl * env.f.ni);
-		env.f.ni -= env.f.pi;
-		env.f.nrl = zr - zi + env.f.pr;
 		zr = SQUARE(env.f.nrl);
 		zi = SQUARE(env.f.ni);
 	}
