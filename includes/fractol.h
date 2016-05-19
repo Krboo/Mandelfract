@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:30:15 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/19 14:49:54 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/19 18:43:49 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ typedef struct      s_fract
 	double          ci; //imaginary part
 	double          pr;
 	double          pi;
-	double          nrl; //new real
+	double          nr; //new real
 	double          ni; //new imaginary
 	double          orl; //old real
 	double          oi; //old imaginary

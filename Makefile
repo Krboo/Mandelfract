@@ -6,13 +6,13 @@
 #    By: pmartine <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 19:43:41 by pmartine          #+#    #+#              #
-#    Updated: 2016/05/19 16:37:49 by pmartine         ###   ########.fr        #
+#    Updated: 2016/05/19 17:55:38 by pmartine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fractol
 
-SRC = src/main.c src/env.c src/hook.c src/fractals.c src/color.c src/mouse.c
+SRC = src/main.c src/env.c src/hook.c src/fractals.c src/pixelput.c src/mouse.c
 
 FLAGS = -Wall -Werror -Wextra
 

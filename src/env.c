@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/16 15:47:10 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/19 16:27:28 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/19 18:42:41 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_env	*ft_reset(t_env *env)
 	env->f.ci = 0.27015;
 	env->f.mx = 0.0;
 	env->f.my = 0.0;
-	env->f.nrl = 0.0;
+	env->f.nr = 0.0;
 	env->f.ni = 0.0;
 	env->freq = 0.1;
 	env->iter = 16;
@@ -49,7 +49,7 @@ void	init_fract(t_env *env)
 	env->f.ci = 0.27015;
 	env->f.mx = 0.0;
 	env->f.my = 0.0;
-	env->f.nrl = 0.0;
+	env->f.nr = 0.0;
 	env->f.ni = 0.0;
 	env->mod.xmax = 2.0;
 	env->mod.xmin = -2.0;
