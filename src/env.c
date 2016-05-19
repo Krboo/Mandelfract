@@ -6,13 +6,13 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/16 15:47:10 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/19 18:42:41 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/19 19:52:08 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-t_env	*ft_reset(t_env *env)
+t_env			*ft_reset(t_env *env)
 {
 	env->mod.xmax = 2.0;
 	env->mod.xmin = -2.0;
@@ -32,7 +32,7 @@ t_env	*ft_reset(t_env *env)
 	return (env);
 }
 
-int		ft_type(char *f)
+static int		ft_argv(char *f)
 {
 	if (ft_strcmp(f, "mandelbrot") == 0)
 		return (1);
@@ -43,7 +43,7 @@ int		ft_type(char *f)
 	return (ft_error("Availables fractals :\n- mandelbrot\n- julia"));
 }
 
-void	init_fract(t_env *env)
+static void		init_fract(t_env *env)
 {
 	env->f.cr = -0.7;
 	env->f.ci = 0.27015;
@@ -57,14 +57,14 @@ void	init_fract(t_env *env)
 	env->mod.ymax = 2.0;
 }
 
-t_env	init_env(char *type)
+t_env			init_env(char *type)
 {
 	t_env	env;
 
 	init_fract(&env);
 	env.zx = ((env.mod.xmax - env.mod.xmin) / (W - 1));
 	env.zy = ((env.mod.ymax - env.mod.ymin) / (H - 1));
-	env.type = ft_type(type);
+	env.type = ft_argv(type);
 	env.display = 1;
 	env.values = 0;
 	env.img.width = W;

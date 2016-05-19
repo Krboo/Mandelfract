@@ -6,13 +6,13 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:35:56 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/19 18:45:14 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/19 19:51:11 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-int		mandelbrot(t_env env, int x, int y)
+static int		mandelbrot(t_env env, int x, int y)
 {
 	int		i;
 	double	zr;
@@ -36,7 +36,7 @@ int		mandelbrot(t_env env, int x, int y)
 	return (i);
 }
 
-int		julia(t_env env, int x, int y)
+static int		julia(t_env env, int x, int y)
 {
 	int				i;
 	long double		zr;
@@ -58,7 +58,7 @@ int		julia(t_env env, int x, int y)
 	return (i);
 }
 
-int		ft_fractal(t_env env, int x, int y)
+static int		ft_fractal(t_env env, int x, int y)
 {
 	if (env.type == 1)
 		return (mandelbrot(env, x, y));
@@ -70,12 +70,12 @@ int		ft_fractal(t_env env, int x, int y)
 		return (0);
 }
 
-int		draw(t_env env)
+int				draw(t_env env)
 {
-	int     color;
-	int     pixel;
-	int     x;
-	int     y;
+	int		color;
+	int		pixel;
+	int		x;
+	int		y;
 
 	y = 0;
 	while (y < H)

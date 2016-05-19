@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:30:15 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/19 18:43:49 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/19 19:49:23 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,12 @@ typedef struct      s_fract
 {
 	double          cr; //real part of the constant c
 	double          ci; //imaginary part
-	double          pr;
-	double          pi;
 	double          nr; //new real
 	double          ni; //new imaginary
 	double          orl; //old real
 	double          oi; //old imaginary
+	double          pr;
+	double          pi;
 	double          zoom;
 	double          mx; //movex
 	double          my; //movey
@@ -78,16 +78,12 @@ void                display(t_env e);
 t_env               init_env(char *type);
 t_env               *ft_reset(t_env *env);
 int                 ft_error(char *error);
-int                 ft_type(char *f);
+int                 ft_arg(char *f);
 int                 ft_keyhook(int keycode, t_env *env);
 int                 ft_expose_hook(t_env *e);
-int                 ft_fractal(t_env env, int x, int y);
 int                 color_get(int i, t_env env);
 void                pixel_put(t_env env, int x, int y, int clr);
 int                 draw(t_env env);
-int                 mandelbrot(t_env env, int x, int y);
-int                 julia(t_env env, int x, int y);
-int                 ft_eventkey(int keycode, t_env *env);
 int                 ft_mousehook(int button, int x, int y, t_env *env);
 int                 ft_juliahook(int x, int y, t_env *env);
 #endif

@@ -6,25 +6,13 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:36:18 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/19 14:51:06 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/19 19:51:33 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-int		ft_keyhook(int keycode, t_env *env)
-{
-	if (keycode == ESC)
-	{
-		mlx_destroy_window(env->mlx, env->win);
-		exit(0);
-	}
-	else
-		ft_eventkey(keycode, env);
-	return (0);
-}
-
-void	ft_arrow_keys(t_env *env, int keycode)
+static void		ft_arrow_keys(t_env *env, int keycode)
 {
 	const double k = env->zx * 10;
 
@@ -52,7 +40,7 @@ void	ft_arrow_keys(t_env *env, int keycode)
 	env->zx = ((env->mod.xmax - env->mod.xmin) / (W - 1));
 }
 
-int		ft_color_hook(int keycode, int *color)
+static int		ft_color_hook(int keycode, int *color)
 {
 	if (keycode == 69)
 		color++;
@@ -61,7 +49,7 @@ int		ft_color_hook(int keycode, int *color)
 	return (0);
 }
 
-int		ft_eventkey(int keycode, t_env *env)
+static int		ft_eventkey(int keycode, t_env *env)
 {
 	mlx_clear_window(env->mlx, env->win);
 	if (keycode == INC_ITER)
@@ -86,5 +74,17 @@ int		ft_eventkey(int keycode, t_env *env)
 		env->values = (env->values == 1) ? 0 : 1;
 	ft_arrow_keys(env, keycode);
 	draw(*env);
+	return (0);
+}
+
+int				ft_keyhook(int keycode, t_env *env)
+{
+	if (keycode == ESC)
+	{
+		mlx_destroy_window(env->mlx, env->win);
+		exit(0);
+	}
+	else
+		ft_eventkey(keycode, env);
 	return (0);
 }
