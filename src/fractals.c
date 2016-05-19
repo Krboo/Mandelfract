@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:35:56 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/18 16:49:33 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/19 16:37:01 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,41 @@ int		julia(t_env env, int x, int y)
 		zi = SQUARE(env.f.ni);
 	}
 	return (i);
+}
+
+int		ft_fractal(t_env env, int x, int y)
+{
+	if (env.type == 1)
+		return (mandelbrot(env, x, y));
+	if (env.type == 2)
+		return (julia(env, x, y));
+	if (env.type == 3)
+		return (julia(env, x, y));
+	else
+		return (0);
+}
+
+int		draw(t_env env)
+{
+	int     color;
+	int     pixel;
+	int     x;
+	int     y;
+
+	y = 0;
+	while (y < H)
+	{
+		x = 0;
+		while (x < W)
+		{
+			pixel = ft_fractal(env, x, y);
+			color = color_get(pixel, env);
+			pixel_put(env, x, y, color);
+			x++;
+		}
+		y++;
+	}
+	mlx_put_image_to_window(env.mlx, env.win, env.img.ptr, 0, 0);
+	display(env);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/16 15:47:10 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/18 18:24:32 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/19 16:27:28 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int		ft_type(char *f)
 		return (1);
 	if (ft_strcmp(f, "julia") == 0)
 		return (2);
+	if (ft_strcmp(f, "troiz") == 0)
+		return (3);
 	return (ft_error("Availables fractals :\n- mandelbrot\n- julia"));
 }
 
