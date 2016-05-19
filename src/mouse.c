@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:34:46 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/18 20:41:10 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/19 14:51:49 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void		ft_init_mouse(t_env *env, double dcr, double dci)
 	env->zx = ((env->mod.xmax - env->mod.xmin) / (W - 1));
 }
 
-int				ft_motionhook(int x, int y, t_env *env)
+int				ft_juliahook(int x, int y, t_env *env)
 {
 	if (x >= 0 && y >= 0 && x <= W && y <= H && env->type == 2 && \
 			env->motion == 1)
@@ -34,7 +34,7 @@ int				ft_motionhook(int x, int y, t_env *env)
 	}
 	else
 		return (0);
-	return (draw_f(*env));
+	return (draw(*env));
 }
 
 int				ft_mousehook(int button, int x, int y, t_env *env)
@@ -59,5 +59,5 @@ int				ft_mousehook(int button, int x, int y, t_env *env)
 		env->f.ci *= 1.5;
 	}
 	ft_init_mouse(env, dcr, dci);
-	return (draw_f(*env));
+	return (draw(*env));
 }

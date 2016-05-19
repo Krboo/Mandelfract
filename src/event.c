@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:36:18 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/18 20:31:11 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/19 14:51:06 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,6 @@ int		ft_eventkey(int keycode, t_env *env)
 	else if (keycode == VALUES)
 		env->values = (env->values == 1) ? 0 : 1;
 	ft_arrow_keys(env, keycode);
-	draw_f(*env);
+	draw(*env);
 	return (0);
 }

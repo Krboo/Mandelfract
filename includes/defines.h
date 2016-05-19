@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:32:20 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/18 18:12:31 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/19 15:09:19 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # define W                  1000
 # define H                  1000
 # define ESC	            53
-# define MOTION             48
+# define MOTION             49
 # define INC_ITER			69
 # define DEC_ITER			78
 # define INC_FREQ			116
@@ -26,9 +26,9 @@
 # define DOWN				125
 # define RIGHT  	        124
 # define LEFT       	    123
-# define CHANGE_FRACT		49
-# define RESET		        36
-# define MENU				71
+# define CHANGE_FRACT		48
+# define RESET		        71
+# define MENU				36
 # define VALUES				258
 # define C                  8
 
