@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:33:43 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/19 19:54:34 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/21 14:01:01 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int		main(int ac, char **av)
 	t_env	env;
 
 	if (ac != 2)
-		ft_error("Usage : ./fractol 'fractal'\nAvailable fractals :\n- mandelbrot\n- julia");
+		ft_error("Usage : ./fractol 'fractal'\nAvailable fractals :\n- mandelbrot\n- julia\n- buddhabrot");
 	env = init_env(av[1]);
 	draw(env);
 	display(env);
