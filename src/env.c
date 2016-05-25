@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/16 15:47:10 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/21 14:09:24 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/25 20:04:02 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ static int		ft_argv(char *f)
 		return (1);
 	if (ft_strcmp(f, "julia") == 0)
 		return (2);
-	if (ft_strcmp(f, "buddhabrot") == 0)
+	if (ft_strcmp(f, "sierpinski") == 0)
 		return (3);
 	return (ft_error("Availables fractals :\n- mandelbrot\n- julia\n- \
-buddhabrot"));
+sierpinski"));
 }
 
 static void		init_fract(t_env *env)
@@ -71,7 +71,7 @@ t_env			init_env(char *type)
 	env.img.width = W;
 	env.img.height = H;
 	env.mlx = mlx_init();
-	env.win = mlx_new_window(env.mlx, W, H, "Fract'ol");
+	env.win = mlx_new_window(env.mlx, W, H, "Fractol");
 	env.img.ptr = mlx_new_image(env.mlx, env.img.width, env.img.height);
 	env.img.img = mlx_get_data_addr(env.img.ptr, \
 	&env.img.bpp, &env.img.ls, &env.img.endian);

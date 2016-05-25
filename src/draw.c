@@ -6,11 +6,32 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:35:56 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/19 19:51:11 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/25 20:50:38 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
+
+static int		sierpinski(t_env env, int x, int y)
+{
+	int		i;
+
+	i = -1;
+	x *= env.zx;
+	y *= env.zy;
+	if (x < 0)
+		x *= -1;
+	if (y < 0)
+		y *= -1;
+	while (++i < env.iter && (x > 0 || y > 0))
+	{
+		if (x % 3 == 1 && y % 3 == 1)
+			return (i);
+		x /= 3;
+		y /= 3;
+	}
+	return (0);
+}
 
 static int		mandelbrot(t_env env, int x, int y)
 {
@@ -65,7 +86,7 @@ static int		ft_fractal(t_env env, int x, int y)
 	if (env.type == 2)
 		return (julia(env, x, y));
 	if (env.type == 3)
-		return (julia(env, x, y));
+		return (sierpinski(env, x, y));
 	else
 		return (0);
 }

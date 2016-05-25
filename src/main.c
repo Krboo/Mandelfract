@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:33:43 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/21 14:01:01 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/25 20:04:20 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,13 @@ int		main(int ac, char **av)
 	t_env	env;
 
 	if (ac != 2)
-		ft_error("Usage : ./fractol 'fractal'\nAvailable fractals :\n- mandelbrot\n- julia\n- buddhabrot");
+		ft_error("Usage : ./fractol 'fractal'\nAvailable fractals :\n- \
+mandelbrot\n- julia\n- sierpinski");
 	env = init_env(av[1]);
 	draw(env);
 	display(env);
 	mlx_hook(env.win, 2, 2, ft_keyhook, &env);
 	mlx_mouse_hook(env.win, ft_mousehook, &env);
-	mlx_hook(env.win, 6, (1L << 6), ft_juliahook, &env);
+	mlx_hook(env.win, 6, (1L << 0), ft_juliahook, &env);
 	mlx_loop(env.mlx);
 }

@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:36:18 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/19 19:51:33 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/25 19:57:13 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,28 +40,19 @@ static void		ft_arrow_keys(t_env *env, int keycode)
 	env->zx = ((env->mod.xmax - env->mod.xmin) / (W - 1));
 }
 
-static int		ft_color_hook(int keycode, int *color)
-{
-	if (keycode == 69)
-		color++;
-	if (keycode == 78)
-		color--;
-	return (0);
-}
-
 static int		ft_eventkey(int keycode, t_env *env)
 {
 	mlx_clear_window(env->mlx, env->win);
 	if (keycode == INC_ITER)
-		env->iter *= (env->iter < 10000) ? 2 : 1;
+		env->iter *= (env->iter < 3200) ? 2 : 1;
 	else if (keycode == DEC_ITER)
-		env->iter /= (env->iter > 2) ? 2 : 1;
-	else if (keycode == INC_FREQ)
+		env->iter /= (env->iter > 1)? 2 : 1;
+	else if (keycode == INC_FREQ && env->freq < 32)
 		env->freq *= 2;
 	else if (keycode == DEC_FREQ && env->freq > 0.1)
 		env->freq /= 2;
 	else if (keycode == CHANGE_FRACT && (env = ft_reset(env)))
-		env->type = (env->type == 2) ? 1 : 2;
+		env->type = (env->type == 3) ? 1 : env->type + 1;
 	else if (keycode == RESET)
 		env = ft_reset(env);
 	else if (keycode == MOTION)
