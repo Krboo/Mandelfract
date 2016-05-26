@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:36:18 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/25 19:57:13 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/26 11:16:52 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static int		ft_eventkey(int keycode, t_env *env)
 {
 	mlx_clear_window(env->mlx, env->win);
 	if (keycode == INC_ITER)
-		env->iter *= (env->iter < 3200) ? 2 : 1;
+		env->iter *= (env->iter < 1600) ? 2 : 1;
 	else if (keycode == DEC_ITER)
 		env->iter /= (env->iter > 1)? 2 : 1;
 	else if (keycode == INC_FREQ && env->freq < 32)
