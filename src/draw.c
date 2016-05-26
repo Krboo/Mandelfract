@@ -6,31 +6,35 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:35:56 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/26 11:30:21 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/26 13:50:06 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-static int		sierpinski(t_env env, int x, int y)
+static int		mandelbar(t_env env, int x, int y)
 {
 	int		i;
+	double	zr;
+	double	zi;
 
-
-	x = (( x + env.zx) * env.zx);
-	y = (( y + env.zy) * env.zy);
-	if (x < 0)
-		x *= -1;
-	if (y < 0)
-		y *= -1;
-	while (x > 0 || y > 0)
+	i = -1;
+	env.f.pi = env.mod.ymax - (long double)y * env.zy;
+	env.f.pr = env.mod.xmin + (long double)x * env.zx;
+	env.f.ni = 0;
+	env.f.nr = 0;
+	zr = SQUARE(env.f.nr);
+	zi = SQUARE(env.f.ni);
+	while (++i < env.iter && (zr + zi) < 4)
 	{
-		if (x % 3 == 1 && y % 3 == 1)
-			return (255);
-		x /= 3;
-		y /= 3;
+		env.f.ni *= env.f.nr;
+		env.f.ni += env.f.ni + env.f.pi;
+		env.f.ni *= (-1);
+		env.f.nr = zr - zi + env.f.pr;
+		zr = SQUARE(env.f.nr);
+		zi = SQUARE(env.f.ni);
 	}
-	return (0);
+	return (i);
 }
 
 static int		mandelbrot(t_env env, int x, int y)
@@ -86,7 +90,7 @@ static int		ft_fractal(t_env env, int x, int y)
 	if (env.type == 2)
 		return (julia(env, x, y));
 	if (env.type == 3)
-		return (sierpinski(env, x, y));
+		return (mandelbar(env, x, y));
 	else
 		return (0);
 }

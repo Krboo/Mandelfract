@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:32:20 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/19 15:09:19 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/26 11:53:28 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 # define FRACTOL_H
 
 # define SQUARE(x) 			(x * x)
-# define W                  1000
-# define H                  1000
+# define W                  700
+# define H                  700
 # define ESC	            53
 # define MOTION             49
 # define INC_ITER			69
