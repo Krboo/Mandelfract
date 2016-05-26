@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:35:56 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/26 13:50:06 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/26 17:49:43 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,7 @@ static int		ft_fractal(t_env env, int x, int y)
 		return (julia(env, x, y));
 	if (env.type == 3)
 		return (mandelbar(env, x, y));
-	else
-		return (0);
+	return (0);
 }
 
 int				draw(t_env env)

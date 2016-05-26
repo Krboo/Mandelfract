@@ -6,12 +6,12 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:32:20 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/26 11:53:28 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/26 16:10:04 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DEFINES_H
-# define FRACTOL_H
+# define DEFINES_H
 
 # define SQUARE(x) 			(x * x)
 # define W                  700

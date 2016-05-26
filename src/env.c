@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/16 15:47:10 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/26 13:51:54 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/26 18:36:48 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_env			*ft_reset(t_env *env)
 	env->mod.ymin = -2.0;
 	env->mod.ymax = 2.0;
 	env->f.cr = -0.7;
-	env->f.ci = 0.27015;
+	env->f.ci = 0.37015;
 	env->f.mx = 0.0;
 	env->f.my = 0.0;
 	env->f.nr = 0.0;
@@ -46,16 +46,16 @@ mandelbar"));
 
 static void		init_fract(t_env *env)
 {
-	env->f.cr = -0.7;
+	env->f.cr = -0.70;
 	env->f.ci = 0.27015;
-	env->f.mx = 0.0;
-	env->f.my = 0.0;
-	env->f.nr = 0.0;
-	env->f.ni = 0.0;
-	env->mod.xmax = 2.0;
-	env->mod.xmin = -2.0;
-	env->mod.ymin = -2.0;
-	env->mod.ymax = 2.0;
+	env->f.mx = 0.00;
+	env->f.my = 0.00;
+	env->f.nr = 0.00;
+	env->f.ni = 0.00;
+	env->mod.xmax = 2.00;
+	env->mod.xmin = -2.00;
+	env->mod.ymin = -2.00;
+	env->mod.ymax = 2.00;
 }
 
 t_env			init_env(char *type)

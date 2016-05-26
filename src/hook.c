@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:36:18 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/26 11:16:52 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/26 17:21:57 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int		ft_eventkey(int keycode, t_env *env)
 	if (keycode == INC_ITER)
 		env->iter *= (env->iter < 1600) ? 2 : 1;
 	else if (keycode == DEC_ITER)
-		env->iter /= (env->iter > 1)? 2 : 1;
+		env->iter /= (env->iter > 1) ? 2 : 1;
 	else if (keycode == INC_FREQ && env->freq < 32)
 		env->freq *= 2;
 	else if (keycode == DEC_FREQ && env->freq > 0.1)
