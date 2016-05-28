@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 16:33:43 by pmartine          #+#    #+#             */
-/*   Updated: 2016/05/26 16:08:59 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/05/27 17:17:59 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ void	display(t_env e)
 		mlx_string_put(e.mlx, e.win, 5, 125, 0xFFFFFF, commands);
 		commands = "Hide/Display inputs : return";
 		mlx_string_put(e.mlx, e.win, 5, 142, 0xFFFFFF, commands);
-		commands = ft_itoa(e.iter);
-		mlx_string_put(e.mlx, e.win, 5, 159, 0xFFFFFF, commands);
 	}
 }
 
